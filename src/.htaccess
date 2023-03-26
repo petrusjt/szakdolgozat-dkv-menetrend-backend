@@ -1,6 +1,5 @@
 <Files ".env">
-    # Require all denied
-    Redirect 404
+    Require all denied
 </Files>
 
 <Files ~ "^.*\.([Hh][Tt][Aa])">
