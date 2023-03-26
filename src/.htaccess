@@ -1,0 +1,10 @@
+<Files ".env">
+    # Require all denied
+    Redirect 404
+</Files>
+
+<Files ~ "^.*\.([Hh][Tt][Aa])">
+order allow,deny
+deny from all
+satisfy all
+</Files>
