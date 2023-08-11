@@ -13,7 +13,7 @@ public class WebConfig implements WebMvcConfigurer {
 
     @Bean
     public OpenAPI apiInfo() {
-        return new OpenAPI().info(new Info().title("后端接口文档").version("1.0.0"));
+        return new OpenAPI().info(new Info().title("thesis-dkv-schedule").version("1.0.0"));
     }
 
     @Bean
