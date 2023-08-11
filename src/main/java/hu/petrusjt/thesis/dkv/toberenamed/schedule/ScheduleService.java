@@ -46,7 +46,7 @@ public class ScheduleService {
             final var startHour = scheduleInputDto.hour();
             final var classifier = scheduleInputDto.scheduleClassifier();
             final List<Schedule> scheduleList = new ArrayList<>();
-            for (final var startMinute : scheduleInputDto.minutes()) {
+            for (final var startMinute : scheduleInputDto.minutes().stream().distinct().toList()) {
                 scheduleList.add(new Schedule(null, routeId, startHour, startMinute, classifier));
             }
             scheduleRepository.saveAll(scheduleList);
