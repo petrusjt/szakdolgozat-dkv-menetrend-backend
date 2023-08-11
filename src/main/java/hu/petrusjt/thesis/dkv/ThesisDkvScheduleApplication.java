@@ -1,4 +1,4 @@
-package hu.petrusjt.thesis.dkv.schedule;
+package hu.petrusjt.thesis.dkv;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
