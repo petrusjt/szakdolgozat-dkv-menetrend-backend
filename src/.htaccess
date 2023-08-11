@@ -1,9 +1,0 @@
-<Files ".env">
-    Require all denied
-</Files>
-
-<Files ~ "^.*\.([Hh][Tt][Aa])">
-order allow,deny
-deny from all
-satisfy all
-</Files>
