@@ -5,6 +5,7 @@ import hu.petrusjt.thesis.dkv.rest.dto.inbound.StopInputDto;
 import hu.petrusjt.thesis.dkv.rest.dto.outbound.ScheduleResponseDto;
 import hu.petrusjt.thesis.dkv.toberenamed.route.model.RouteDirection;
 import hu.petrusjt.thesis.dkv.toberenamed.schedule.ScheduleService;
+import hu.petrusjt.thesis.dkv.toberenamed.schedule.model.ScheduleClassifier;
 import hu.petrusjt.thesis.dkv.toberenamed.stop.StopService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatusCode;
@@ -15,8 +16,11 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.time.LocalDate;
+import java.time.ZoneId;
 import java.util.List;
 
 @RestController
@@ -47,9 +51,13 @@ public class ScheduleInputController {
     @CrossOrigin
     @GetMapping("/{route}/{direction}")
     public ResponseEntity<ScheduleResponseDto> getSchedule(@PathVariable("route") final String routeId,
-                                                           @PathVariable("direction") final RouteDirection direction) {
+            @PathVariable("direction") final RouteDirection direction,
+            @RequestParam("classifier") final ScheduleClassifier classifier) {
         try {
-            return ResponseEntity.ok(scheduleService.getScheduleForRoute(routeId, direction));
+            final var scheduleClassifier = classifier == null
+                    ? ScheduleClassifier.getFromDate(LocalDate.now(ZoneId.of("Europe/Budapest")))
+                    : classifier;
+            return ResponseEntity.ok(scheduleService.getScheduleForRoute(routeId, direction, scheduleClassifier));
         } catch (final IllegalArgumentException ex) {
             return ResponseEntity.notFound().build();
         } catch (final Exception ex) {

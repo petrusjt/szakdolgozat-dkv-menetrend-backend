@@ -58,7 +58,8 @@ public class ScheduleService {
         return routeRepository.save(route);
     }
 
-    public ScheduleResponseDto getScheduleForRoute(final String routeId, final RouteDirection direction) {
+    public ScheduleResponseDto getScheduleForRoute(final String routeId, final RouteDirection direction,
+            final ScheduleClassifier classifier) {
         final var route = routeRepository.findRouteByNameAndDirection(routeId, direction);
         if (route == null) {
             throw new IllegalArgumentException();
@@ -71,8 +72,7 @@ public class ScheduleService {
 
         final var startTimes = mapScheduleListToStartTimeList(
                 scheduleRepository.findAllByRouteId(route.getId()).stream()
-                        // TODO erre ne legyen szükség
-                        .filter(schedule -> schedule.getScheduleClassifier() == ScheduleClassifier.TANSZUNET_MUNKANAP)
+                        .filter(schedule -> schedule.getScheduleClassifier() == classifier)
                         .toList());
         final var startsFrom = stops.get(0);
 
