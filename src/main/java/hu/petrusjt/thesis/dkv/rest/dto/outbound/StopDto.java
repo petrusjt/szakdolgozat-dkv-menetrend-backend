@@ -1,6 +1,6 @@
 package hu.petrusjt.thesis.dkv.rest.dto.outbound;
 
-import hu.petrusjt.thesis.dkv.toberenamed.stop.model.Stop;
+import hu.petrusjt.thesis.dkv.component.stop.model.Stop;
 
 public record StopDto(String name, Long timeFromStart) {
 

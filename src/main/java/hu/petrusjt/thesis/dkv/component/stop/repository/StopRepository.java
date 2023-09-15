@@ -1,6 +1,6 @@
-package hu.petrusjt.thesis.dkv.toberenamed.stop.repository;
+package hu.petrusjt.thesis.dkv.component.stop.repository;
 
-import hu.petrusjt.thesis.dkv.toberenamed.stop.model.Stop;
+import hu.petrusjt.thesis.dkv.component.stop.model.Stop;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

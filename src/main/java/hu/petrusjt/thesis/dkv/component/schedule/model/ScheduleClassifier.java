@@ -1,4 +1,4 @@
-package hu.petrusjt.thesis.dkv.toberenamed.schedule.model;
+package hu.petrusjt.thesis.dkv.component.schedule.model;
 
 import hu.petrusjt.thesis.dkv.rest.controller.util.DateHelper;
 

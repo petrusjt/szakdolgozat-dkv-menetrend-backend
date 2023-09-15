@@ -1,17 +1,17 @@
-package hu.petrusjt.thesis.dkv.toberenamed.schedule;
+package hu.petrusjt.thesis.dkv.component.schedule;
 
 import hu.petrusjt.thesis.dkv.rest.dto.inbound.ScheduleInputDto;
 import hu.petrusjt.thesis.dkv.rest.dto.outbound.RouteDto;
 import hu.petrusjt.thesis.dkv.rest.dto.outbound.ScheduleResponseDto;
 import hu.petrusjt.thesis.dkv.rest.dto.outbound.StartTimesDto;
 import hu.petrusjt.thesis.dkv.rest.dto.outbound.StopDto;
-import hu.petrusjt.thesis.dkv.toberenamed.route.model.Route;
-import hu.petrusjt.thesis.dkv.toberenamed.route.model.RouteDirection;
-import hu.petrusjt.thesis.dkv.toberenamed.route.repository.RouteRepository;
-import hu.petrusjt.thesis.dkv.toberenamed.schedule.model.Schedule;
-import hu.petrusjt.thesis.dkv.toberenamed.schedule.model.ScheduleClassifier;
-import hu.petrusjt.thesis.dkv.toberenamed.schedule.repository.ScheduleRepository;
-import hu.petrusjt.thesis.dkv.toberenamed.stop.repository.StopRepository;
+import hu.petrusjt.thesis.dkv.component.route.model.Route;
+import hu.petrusjt.thesis.dkv.component.route.model.RouteDirection;
+import hu.petrusjt.thesis.dkv.component.route.repository.RouteRepository;
+import hu.petrusjt.thesis.dkv.component.schedule.model.Schedule;
+import hu.petrusjt.thesis.dkv.component.schedule.model.ScheduleClassifier;
+import hu.petrusjt.thesis.dkv.component.schedule.repository.ScheduleRepository;
+import hu.petrusjt.thesis.dkv.component.stop.repository.StopRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;

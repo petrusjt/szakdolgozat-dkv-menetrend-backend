@@ -1,7 +1,7 @@
-package hu.petrusjt.thesis.dkv.toberenamed.route.repository;
+package hu.petrusjt.thesis.dkv.component.route.repository;
 
-import hu.petrusjt.thesis.dkv.toberenamed.route.model.Route;
-import hu.petrusjt.thesis.dkv.toberenamed.route.model.RouteDirection;
+import hu.petrusjt.thesis.dkv.component.route.model.Route;
+import hu.petrusjt.thesis.dkv.component.route.model.RouteDirection;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

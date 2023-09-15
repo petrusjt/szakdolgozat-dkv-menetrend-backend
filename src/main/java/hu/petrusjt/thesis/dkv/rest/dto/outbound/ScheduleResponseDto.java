@@ -1,6 +1,6 @@
 package hu.petrusjt.thesis.dkv.rest.dto.outbound;
 
-import hu.petrusjt.thesis.dkv.toberenamed.schedule.model.ScheduleClassifier;
+import hu.petrusjt.thesis.dkv.component.schedule.model.ScheduleClassifier;
 
 import java.util.List;
 

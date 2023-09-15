@@ -1,6 +1,6 @@
 package hu.petrusjt.thesis.dkv.rest.dto.outbound;
 
-import hu.petrusjt.thesis.dkv.toberenamed.route.model.Route;
+import hu.petrusjt.thesis.dkv.component.route.model.Route;
 
 public record RouteDto(String identifier) {
 

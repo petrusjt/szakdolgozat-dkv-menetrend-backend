@@ -1,6 +1,6 @@
-package hu.petrusjt.thesis.dkv.toberenamed.schedule.repository;
+package hu.petrusjt.thesis.dkv.component.schedule.repository;
 
-import hu.petrusjt.thesis.dkv.toberenamed.schedule.model.Schedule;
+import hu.petrusjt.thesis.dkv.component.schedule.model.Schedule;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

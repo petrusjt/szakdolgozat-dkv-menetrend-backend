@@ -1,10 +1,10 @@
-package hu.petrusjt.thesis.dkv.toberenamed.stop;
+package hu.petrusjt.thesis.dkv.component.stop;
 
 import hu.petrusjt.thesis.dkv.rest.dto.inbound.StopInputDto;
-import hu.petrusjt.thesis.dkv.toberenamed.route.model.Route;
-import hu.petrusjt.thesis.dkv.toberenamed.route.repository.RouteRepository;
-import hu.petrusjt.thesis.dkv.toberenamed.stop.model.Stop;
-import hu.petrusjt.thesis.dkv.toberenamed.stop.repository.StopRepository;
+import hu.petrusjt.thesis.dkv.component.route.model.Route;
+import hu.petrusjt.thesis.dkv.component.route.repository.RouteRepository;
+import hu.petrusjt.thesis.dkv.component.stop.model.Stop;
+import hu.petrusjt.thesis.dkv.component.stop.repository.StopRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
