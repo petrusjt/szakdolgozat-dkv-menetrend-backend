@@ -76,7 +76,7 @@ public class ScheduleService {
                         .toList());
         final var startsFrom = stops.get(0);
 
-        return new ScheduleResponseDto(RouteDto.of(route), stops, startTimes, startsFrom);
+        return new ScheduleResponseDto(RouteDto.of(route), stops, startTimes, startsFrom, classifier);
     }
 
     private List<StartTimesDto> mapScheduleListToStartTimeList(final List<Schedule> scheduleList) {
