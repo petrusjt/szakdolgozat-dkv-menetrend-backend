@@ -52,7 +52,7 @@ public class ScheduleInputController {
     @GetMapping("/{route}/{direction}")
     public ResponseEntity<ScheduleResponseDto> getSchedule(@PathVariable("route") final String routeId,
             @PathVariable("direction") final RouteDirection direction,
-            @RequestParam("classifier") final ScheduleClassifier classifier) {
+            @RequestParam(value = "classifier", required = false) final ScheduleClassifier classifier) {
         try {
             final var scheduleClassifier = classifier == null
                     ? ScheduleClassifier.getFromDate(LocalDate.now(ZoneId.of("Europe/Budapest")))
