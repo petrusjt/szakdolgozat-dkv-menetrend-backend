@@ -34,4 +34,7 @@ public class Stop {
 
     @Column(name = "MINUTES_FROM_START")
     private Long minutesFromStart;
+
+    @Column(name = "STOP_INDEX")
+    private Long stopIndex;
 }

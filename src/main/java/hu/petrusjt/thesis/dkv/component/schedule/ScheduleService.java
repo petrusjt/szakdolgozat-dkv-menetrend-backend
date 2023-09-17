@@ -67,7 +67,7 @@ public class ScheduleService {
 
         final var stops = stopRepository.findAllByRouteId(route.getId()).stream()
                 .map(StopDto::of)
-                .sorted(Comparator.comparing(StopDto::timeFromStart))
+                .sorted(Comparator.comparing(StopDto::stopIndex))
                 .toList();
 
         final var startTimes = mapScheduleListToStartTimeList(
