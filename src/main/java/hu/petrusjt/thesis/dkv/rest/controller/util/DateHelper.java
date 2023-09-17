@@ -5,6 +5,8 @@ import java.time.Month;
 
 public class DateHelper {
 
+    private DateHelper() {}
+
     /**
      * Returns whether date is holiday in Hungary.
      *
