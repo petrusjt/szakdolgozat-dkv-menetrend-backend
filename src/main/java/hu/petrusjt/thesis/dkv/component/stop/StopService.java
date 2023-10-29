@@ -30,7 +30,7 @@ public class StopService {
                 route = createRoute(stopInputDto);
             }
 
-            final var stop = new Stop(null, route.getId(), stopInputDto.stopName(), stopInputDto.minutesFromStart(),
+            final var stop = new Stop(null, route, stopInputDto.stopName(), stopInputDto.minutesFromStart(),
                     stopInputDto.stopIndex());
             stopRepository.save(stop);
         }

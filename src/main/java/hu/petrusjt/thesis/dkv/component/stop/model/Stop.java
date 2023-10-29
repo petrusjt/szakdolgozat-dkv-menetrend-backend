@@ -1,10 +1,13 @@
 package hu.petrusjt.thesis.dkv.component.stop.model;
 
+import hu.petrusjt.thesis.dkv.component.route.model.Route;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
@@ -26,8 +29,9 @@ public class Stop {
     @SequenceGenerator(name = "S_STOP", sequenceName = "S_STOP")
     private Long id;
 
-    @Column(name = "ID_ROUTE")
-    private Long routeId;
+    @ManyToOne
+    @JoinColumn(name = "ID_ROUTE")
+    private Route route;
 
     @Column(name = "NAME")
     private String name;
